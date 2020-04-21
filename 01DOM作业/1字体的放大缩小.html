@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 396px;
+				height: 300px;
+				margin: auto;
+				cursor: pointer;
+			}
+			#box .btn{
+	            display: inline-block;
+	            width: 50px;
+	            height: 30px;
+	            background: #000;
+	            color: #fff;
+	            font-size: 20px;
+	            text-align: center;
+	            line-height: 30px;
+	            cursor: pointer;
+            }
+			#box p{
+				
+	            margin : 10px 0;
+	            text-align: center;
+	            color: red;
+            }
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p>周末快乐呀!</p>
+			<img src="img/1.JPG"/>	
+			<span id="zj" class="btn">+</span>
+	        <span id="js" class="btn">-</span>
+		</div>
+		<script type="text/javascript">
+			var oZj=document.getElementById("zj"),
+				oJs=document.getElementById("js"),
+				oBox=document.getElementById("box"),
+				size=20;
+			oZj.onclick=function(){
+				size++;
+				if(size>72){
+					alert("最大字体")
+					size=72;
+				}
+				oBox.style.fontSize=size+"px";
+			}
+			oJs.onclick=function(){
+				size--;
+				if(size<14){
+					alert("最小字体了")
+					size=14;
+				}
+				oBox.style.fontSize=size+"px";
+			}
+		</script>
+	</body>
+</html>

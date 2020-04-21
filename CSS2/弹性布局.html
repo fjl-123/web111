@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*弹性布局:不设置后代,只设置父级*/
+		.box{
+			width: 500px;
+			height: 300px;
+			border: 1px solid darkblue;
+			margin: 20px auto;
+			display: flex;   	/*弹性布局前提*	/
+			flex-wrap: wrap;	/*换行*/
+			/*justify-content: flex-start;*/	/*默认从左至右*/
+			/*justify-content: flex-end;*/		/*从后往前*/
+			/*justify-content: space-around;*/		/*两边间距相同,中间间距相同*/
+			justify-content: space-between;		/*中间间距相同(左中右)*/
+			/*flex-direction: column-reverse;*/		/*竖着(逆)*/
+			/*flex-direction: row-reverse;*/		/*横着(逆)*/
+			/*align-items: center;*/	/*垂直方向(中心居中)*/
+			align-items: stretch;	/*拉伸(不设子级高)*/
+			}
+		.box p{
+			width: 100px;
+		/*	height: 100px;*/
+			background-color: firebrick;
+			margin: 10px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+		</div>
+	</body>
+</html>

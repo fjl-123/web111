@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.nav{
+				width: 1000px;
+				height: 58px;
+				border: 2px solid red;
+				margin: 20px auto;
+			}
+			.nav ul{
+				list-style: none;
+			}
+			.nav ul li{
+				float: left;
+				width: 100px;
+				height: 58px;
+				margin: 0 20px;
+				
+			}
+			.nav ul li a{
+				display: block;/*转化为块级元素*/
+				height: 58px;
+			}
+			.menu{
+				width: 100px;
+				height: 58px;
+				line-height: 58px;
+				text-align: center;
+				position: relative;
+				transition: all 3s;
+				transform-style: preserve-3d;
+			}
+			.menu span{
+				width: 100px;
+				height: 58px;
+				display: block;
+				position: absolute;
+				color: white;font-size: 20px;
+				
+			}
+			.menu span.menu1{
+				background-color:red;
+				z-index: 1;
+				transform: translateZ(29deg);
+			}
+			.menu span.menu2{
+				background-color: blueviolet;
+				transform: rotateX(90deg) translateZ(29px);
+			}
+			.nav ul li:hover .menu{
+				transform: rotateX(-90deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">
+						<div class="menu">
+							<span class="menu1">关于我们的</span>
+							<span class="menu2">故事</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="menu">
+							<span class="menu1">关于我们的</span>
+							<span class="menu2">故事</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="menu">
+							<span class="menu1">关于我们的</span>
+							<span class="menu2">故事</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="menu">
+							<span class="menu1">关于我们的</span>
+							<span class="menu2">故事</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="menu">
+							<span class="menu1">关于我们的</span>
+							<span class="menu2">故事</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="menu">
+							<span class="menu1">关于我们的</span>
+							<span class="menu2">故事</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

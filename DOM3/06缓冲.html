@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 60px;
+				height: 60px;
+				background-color: salmon;
+				position: absolute;
+				top: 10px;
+				left: 100px;
+			}
+			.n1{top: 0;}
+			.n2{top: 100px;}
+			.n3{top: 200px;}
+			.n4{top: 300px;}
+			.n5{top: 400px;}
+			.n6{top: 500px;}
+			.n7{top: 800px;}
+		</style>
+	</head>
+	<body>
+		<div class="n1"></div>
+		<div class="n2"></div>
+		<div class="n3"></div>
+		<div class="n4"></div>
+		<div class="n5"></div>
+		<div class="n6"></div>
+		<div class="n7"></div>
+		<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var Divs=document.getElementsByTagName("div");
+			//t当前帧编号
+			//b起始位置
+			//c变化量
+			//d总帧数
+			function linear(t,b,c,d){
+				return c*t/d+b;
+			}
+			function easeIn(t,b,c,d){
+				return c * ( t /= d) * t + b;
+			}
+			function easeOut(t,b,c,d){
+				return -c *(t/=d)*(t-2) + b;
+			}
+			var framNumber=0;//帧编号
+			var timer=setInterval(function(){
+				framNumber++;
+				if (framNumber==150) {
+					clearInterval(timer);
+				}
+				Divs[0].style.left=linear(framNumber,100,900,150)+"px";
+				Divs[1].style.left=easeIn(framNumber,100,900,150)+"px";
+				Divs[2].style.left=easeOut(framNumber,100,900,150)+"px";
+				Divs[3].style.left=Tween.BounceEaseOut(framNumber,100,900,150)+"px";
+				Divs[4].style.left=Tween.BackEaseIn(framNumber,100,900,150,3)+"px";
+				Divs[5].style.left=Tween.QuartEaseOut(framNumber,100,900,150)+"px";
+			},20)
+		</script>
+	</body>
+</html>

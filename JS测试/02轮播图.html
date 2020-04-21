@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{	margin: 0;padding: 0;}
+			.box{
+				width: 800px;
+				height: 400px;
+				margin: 50px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.lb ul{
+				list-style: none;
+			}
+			.lb ul li{
+				display:none;
+			}
+			.lb ul li img{
+				width: 800px;
+				height: 400px;
+			}
+			.lb ul li.current{
+				display:block;
+			}
+			.btns span{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 200px;
+			}
+			.btns span img{
+				width: 50px;
+				height: 50px;
+			}
+			.leftBtn{
+				left: 10px;
+			}
+			.rightBtn{
+				right:10px;
+			}
+			.circles{
+				position: absolute;
+				bottom: 10px;
+				width: 200px;
+				height: 20px;
+				left: 50%;
+				margin-left: -50px;
+			}
+			.circles ol{
+				list-style: none;
+			}
+			.circles ol li{
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				border-radius: 50%;
+				cursor: pointer;
+				margin-right: 10px;
+				float: left;
+			}
+			.circles ol li.current{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div id="lb" class="lb">
+				<ul>
+					<li class="current">
+						<a href=""><img src="img/01.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/02.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/03.JPG"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/05.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/07.JPG"/></a>
+					</li>
+				</ul>
+			</div>
+			<div class="btns">
+				<span class="leftBtn" id="click_leftBtn">
+					<img src="img/箭头 l.png"/>
+				</span>
+				<span class="rightBtn" id="click_rightBtn">
+					<img src="img/箭头r.png"/>
+				</span>
+			</div>
+			<div id="circles" class="circles">
+				<ol>
+					<li class="current"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var Lb=document.getElementById("lb").getElementsByTagName("li");
+			var LeftBtn=document.getElementById("click_leftBtn");
+			var RightBtn=document.getElementById("click_rightBtn");
+			var circlesLis=document.getElementById("circles").getElementsByTagName("li");
+			var img_idx=0;
+			var RightBtn=document.getElementById("click_rightBtn");
+		    RightBtn.onclick=function(){
+				img_idx++;
+				if (img_idx>4) {
+					img_idx=0;
+				}
+				changePic();
+			}
+			LeftBtn.onclick=function(){
+				img_idx--;
+				if (img_idx<0) {
+					img_idx=4;
+				}
+				changePic();
+			}
+			for(var i=0;i<circlesLis.length;i++){
+				(function(m){
+					circlesLis[m].onmouseover=function(){
+						img_idx=m;
+						changePic();
+					}
+				})(i)
+			}
+			function changePic(){
+				for (var i=0;i<Lb.length;i++) {
+					Lb[i].className="";
+				}
+				Lb[img_idx].className="current";
+				for(var i=0;i<circlesLis.length;i++){
+					circlesLis[i].className="";
+				}
+				circlesLis[img_idx].className="current";
+			}
+		
+		</script>
+	</body>
+</html>

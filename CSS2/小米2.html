@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.nav{
+				width: 100%;
+				height: 300px;
+			/*	background-color: red;*/
+				position: relative;
+			}
+			.menu{
+				width: 1000px;
+				height: 40px;
+				margin: auto;
+				line-height: 40px;
+				list-style: none;
+			}
+			.menu li{
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				/*background-color: yellowgreen;*/
+				float: left;
+				margin: 0 5px;
+			}
+			.menu li:hover{
+				background-color: royalblue;
+				color: white;
+			}
+			.two_menu{
+				width: 100%;
+				height: 200px;
+				background-color: white;
+				position: absolute;
+				left: 0;
+				display: none;
+				cursor: pointer;
+				float: left;
+			}
+			.two_menu li{
+				background-color: white;
+				color:black;
+				list-style: none;
+				margin: 10px 30px;
+				width: 151px;
+				height: 104px;
+				background-image: url(img/s.jpg);
+				float: left;
+				}
+			.words{
+				height: 40px;
+				margin-top: 104px;
+				color: black;
+			}
+			.words:hover{
+				background-color: #F4A460;
+				color: royalblue;
+				border-radius: 8px;
+				
+			}
+			.two_menu li:hover{
+				background-color:coral;
+				color: whitesmoke;
+				
+			}
+			.menu li:hover .two_menu{
+				display: block;
+			}
+			.title{
+				color: black;
+			}
+			.title:hover{
+				background-color: red;
+				color: white;
+				border-radius: 8px;
+			}
+			.two_menu li p{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+				<ul class="menu">
+					<li>小米手机
+						<ul class="two_menu">
+							<li><p class="words">小米手机</p></li>
+							<li><p class="words">小米手机</p></li>
+							<li><p class="words">小米手机</p></li>
+							<li><p class="words">小米手机</p></li>
+							<li><p class="words">小米手机</p></li>
+							<li><p class="words">小米手机</p></li>
+						</ul>
+					</li>
+					<li>红米
+						<ul class="two_menu">
+							<li><p class="words">红米</p></li>
+							<li><p class="words">红米</p></li>
+							<li><p class="words">红米</p></li>
+							<li><p class="words">红米</p></li>
+							<li><p class="words">红米</p></li>
+							<li><p class="words">红米</p></li>
+						</ul>
+					</li>
+					<li>电视
+						<ul class="two_menu">
+							<li >
+								<div class="tu"><img src="img/电视.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">小米电视</div>
+								<p>2669￥</p></li>
+							<li >	<div class="tu"><img src="img/电视.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">小米电视</div>
+								<p>2669￥</p></li>
+							<li ><div class="tu"><img src="img/电视.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">小米电视</div>
+								<p>2669￥</p></li>
+							<li ><div class="tu"><img src="img/电视.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">小米电视</div>
+								<p>2669￥</p></li>
+							<li ><div class="tu"><img src="img/电视.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">小米电视</div>
+								<p>2669￥</p></li>
+							<li ><div class="tu"><img src="img/电视.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">小米电视</div>
+								<p>2669￥</p></li>
+						</ul>
+					</li>
+					<li>笔记本
+						<ul class="two_menu">
+							<li><div class="tu"><img src="img/电脑.png"/ width="151px";hheight="107px";></div>
+								<div class="title">电脑</div>
+								<p>4669￥</p></li>
+							<li><div class="tu"><img src="img/电脑.png"/ width="151px";hheight="107px";></div>
+								<div class="title">游戏2019版</div>
+								<p>4669￥</p></li>
+							<li><div class="tu"><img src="img/电脑.png"/ width="151px";hheight="107px";></div>
+								<div class="title">办公版</div>
+								<p>4669￥</p></li>
+							<li><div class="tu"><img src="img/电脑.png"/ width="151px";hheight="107px";></div>
+								<div class="title">小米笔记本</div>
+								<p>4669￥</p></li>
+							<li><div class="tu"><img src="img/电脑.png"/ width="151px";hheight="107px";></div>
+								<div class="title">电脑</div>
+								<p>4669￥</p></li>
+								<li><div class="tu"><img src="img/电脑.png"/ width="151px";hheight="107px";></div>
+								<div class="title">小米笔记本</div>
+								<p>4669￥</p></li>
+						</ul>
+					</li>
+					<li>家电
+						<ul class="two_menu">
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+						</ul>
+					</li>
+					<li>路由器
+						<ul class="two_menu">
+							<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+						</ul>
+					</li>
+					<li>智能硬件
+						<ul class="two_menu">
+							<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+								<li><div class="tu"><img src="img/a.jpg"/ width="151px";hheight="107px";></div>
+								<div class="title">净水器</div>
+								<p>669￥</p></li>
+						</ul>
+					</li>
+					<li>服务
+						<ul class="two_menu">	
+						</ul>
+					</li>
+					<li>社区</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

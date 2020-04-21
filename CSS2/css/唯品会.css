@@ -1,0 +1,260 @@
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		ul {
+			width: 1000px;
+			height: 100px;
+			/*border: 1px solid red;*/
+			margin: 10px auto;
+			list-style: none;
+			/*去点或数字(序列)*/
+		}
+		
+		ul li {
+			height: 100px;
+			float: left;
+			background-image: url(img/x.png);
+			background-repeat: no-repeat;
+		}
+		/*后代：li:nth-child(2n偶){}li:nth-child(2n-1/2n+1奇){}li:first-child{第一个子级}li:last-child{最后一个子级}*/
+		
+		ul li:nth-child(1) {
+			margin-left: 20px;
+			width: 126px;
+			background-position: -308px -57px;
+		}
+		
+		ul li:nth-child(2) {
+			float: right;
+			width: 304px;
+			height: 70px;
+			background-position: -1px -1px;
+		}
+		
+		.banner {
+			width: 100%;
+			height: 650px;
+			background-image: url(img/banner.jpg);
+			background-repeat: no-repeat;
+			background-position: center top;
+		}
+		
+		.box {
+			width: 360px;
+			height: 420px;
+			background-color: white;
+			float: right;
+			margin-top: 50px;
+			margin-right: 150px;
+		}
+		
+		.box1 {
+			width: 179px;
+			height: 50px;
+			float: left;
+			/*margin-top:10px;*/
+			line-height: 50px;
+			border-bottom: 1px solid #E0E0E0;
+			border-right: 1px solid #E0E0E0;
+		}
+		
+		.box1 h3 {
+			text-align: center;
+			color: #66666F;
+		}
+		
+		.box1 h3:hover {
+			color: #E3017E;
+		}
+		
+		.box2 {
+			width: 180px;
+			height: 50px;
+			float: left;
+			/*margin-top:10px;*/
+			line-height: 50px;
+			border-bottom: 1px solid #E0E0E0;
+		}
+		
+		.box2 h3 {
+			text-align: center;
+			color: #E3017E;
+		}
+		
+		.Oinput {
+			width: 300px;
+			height: 46px;
+			border: 1px solid #B2B2B2;
+			margin-top: 80px;
+			margin-left: 25px;
+		}
+		/*伪类: 超链接有四个伪类:a:visited{4被访问过}a:hover{3点击事件}a:active{2鼠标按下的那一刻}a:link{1默认}*/
+		/*伪元素 .box::before/after{content'我是box前面/后面的内容'}  不设置宽高，会自己转换为行内元素*/
+		
+		.Oinput::before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-image: url(img/x.png);
+			background-repeat: no-repeat;
+			background-position: -400px -206px;
+			margin-top: 13px;
+			margin-left: 10px;
+			float: left;
+		}
+		
+		.Oinput input {
+			float: left;
+			width: 240px;
+			height: 30px;
+			margin: 8px 0;
+			border: none;
+			/*去边框线*/
+			outline: none;
+			/*去蓝线*/
+			text-indent: 1em;
+			/*首行缩进*/
+		}
+		/*-webkit-input-placeholder  双核浏览器（如谷歌）*/
+		/*-webkit-moz-placeholder  火狐*/
+		/*-webkit-ms-placeholder  ie浏览器*/
+		
+		.Oinput input::-webkit-input-placeholder {
+			color: hotpink;
+		}
+		
+		.Oinput1 {
+			width: 300px;
+			height: 46px;
+			border: 1px solid #B2B2B2;
+			margin-top: 20px;
+			margin-left: 25px;
+		}
+		/*伪元素*/
+		
+		.Oinput1::before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-image: url(img/x.png);
+			/*背景图*/
+			background-repeat: no-repeat;
+			/*背景图不重复*/
+			background-position: -544px -161px;
+			/*X Y移动*/
+			margin-top: 13px;
+			margin-left: 10px;
+			float: left;
+		}
+		
+		.Oinput1 input {
+			float: left;
+			width: 240px;
+			height: 30px;
+			margin: 8px 0;
+			border: none;
+			/*去边框*/
+			outline: none;
+			/*去蓝线*/
+			text-indent: 1em;
+			/*首行缩进*/
+		}
+		
+		.Oinput1 input::-webkit-input-placeholder {
+			color: hotpink;
+		}
+		
+		.box5 {
+			width: 300px;
+			height: 20px;
+			margin-top: 30px;
+			margin-left: 35px;
+			/*	text-align: center;*/
+		}
+		
+		.box5 p {
+			width: 150px;
+			font-size: 18px;
+			margin-left: 5px;
+			/*text-align: center;*/
+			float: left;
+		}
+		
+		.box5 span {
+			margin-right: 35px;
+			float: right;
+			/* text-align: center;*/
+			font-size: 12px;
+			margin-top: 5px;
+		}
+		
+		.box6 {
+			width: 300px;
+			height: 46px;
+			background-color: #F10180;
+			margin-left: 25px;
+			margin-top: 30px;
+			border-radius: 8px;
+		}
+		
+		.box6 h3 {
+			text-align: center;
+			line-height: 46px;
+			color: white;
+		}
+		
+		fieldset {
+			width: 300px;
+			border: none;
+			border-top: 1px solid #B5C0CB;
+			margin-top: 25px;
+			margin-left: 25px;
+			/*	text-align: center;*/
+		}
+		
+		fieldset p:hover {
+			background-color: #38B774;
+		}
+		
+		.wx {
+			background-image: url(img/x.png);
+			background-position: -444px -161px;
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			position: relative;
+		}
+		
+		.bottom {
+			width: 300px;
+			height: 30px;
+			text-align: center;
+			margin: auto 20px;
+			/*align-items: center;*/
+			/*垂直方向居中*/
+		}
+		
+		.bottom p {
+			font-size: 14px;
+			float: left;
+			margin: auto 10px;
+			text-align: center;
+		}
+		
+		.bottom span {
+			font-size: 14px;
+			font-weight: bold;
+			float: left;
+			margin: auto 10px;
+			text-align: center;
+		}
+		
+		.bottom h4 {
+			float: right;
+			text-align: center;
+			margin-bottom: 10px;
+		}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				/*margin: 0;*/
+			}
+		</style>
+	</head>
+	<body>
+<!--//控制台-->
+		<script type="text/javascript">
+//			js注释
+//			单行注释 Ctrl+/
+//			多行注释Ctrl+shift+/
+			console.log(123); console.log('你好');console.log('你好1');
+			console.log('你好2')
+			console.log('你好3')
+			console.log('你好4')
+			console.log('你好4')
+			console.log('你好4')
+		</script>
+<!--数字字面量-->
+		<script type="text/javascript">
+//			8进制：如果以0开头、或者以0o开头、或者以0O开头的都是八进制，八进制只能用0~7来表示
+//				以0开头
+				console.log(0123);
+				console.log(044);//36
+				console.log(010);//8
+				console.log(036);//30
+				console.log(022);//18
+				console.log(08);//8
+//				以0o开头、或者以0O开头
+				console.log(0o123)//83
+				console.log(0O23)//19
+				console.log(0o33)//27
+//				console.log(0o88)//报错
+//				16进制：如果以0x开头的都是十六进制。0-9 a-f
+				console.log(0x2b);//11+32=43
+				console.log(0xff);//255
+//				console.log(0x3m);//
+//				15
+				console.log(15);
+				console.log(017);
+				console.log(0o17);
+				console.log(0O17);
+				console.log(0xf);
+//				浮点数(小数)
+				console.log(3.1415926);
+				console.log(0.1232434);
+				console.log(.1232434);//
+				console.log(5e6);//5000000
+				console.log(5.123e6);//5123000
+				console.log(3e-2);//0.03
+				console.log(-8e123243243);//-Infinity
+				console.log(8e123243243);//-Infinity
+				console.log(0/0)//NaN
+		</script>
+<!--字符串字面量-->
+		<script type="text/javascript">
+			console.log('今天星期二');
+			console.log("今天星期二");
+//			console.log(‘今天星期二’);
+			console.log('22');//22
+			console.log(22);//22
+			console.log("老王，\	\你好呀！") //老王，   你好呀!
+			console.log('今天太阳\'真好\'');  //今天太阳'真好'
+		</script>
+<!--变量-->
+		<script type="text/javascript">
+			var a;//定义一个变量
+            //赋值
+			a=110;
+			//	输出变量a
+			console.log(a);
+//			console.log(b);//报错，因为b没有进行定义
+			//合法的命名
+			var a
+			var $
+			var A
+			var b123
+			var ______;
+			var _123;
+			var $_01as;
+			var _;
+			var aa_123_$;
+			//非法的命名
+			/*var 123;
+			var 123a;
+			var 12_a;
+			var asd@1231;
+			var var;
+			var class;
+			var ￥*/
+			/*var a=100;
+			var b=200;
+			var c;
+			
+			a=b;
+			console.log(a);//200
+			console.log(b)//200
+			console.log(c);//undefined*/
+			aaa=111;
+			console.log(aaa);//111;
+/*			var a=10;
+			var b=20;
+			var c=30;*/
+			/*var a=10,b=20,c=30;
+			console.log(a);
+			console.log(b);
+			console.log(c);*/
+//			变量声明的提升
+
+			a=100;
+			var a;//这行定义会被自动的提升
+			console.log(a);//100
+			console.log(ad);//undefined 提升只能提升定义，不能提上赋初值，
+			var ad=200;//提升定义，不能提升赋值
+		</script>
+<!--变量值的传递-->
+		<script type="text/javascript">
+			var a=111,b=222,c=333;
+			a=b;
+			b=c;
+			c=a;
+			console.log(a);//222
+			console.log(b);//333
+			console.log(c);//222
+		</script>
+<!--typeof检测类型-->
+		<script type="text/javascript">
+		/*	var a=111;
+			var b=24343354;
+			var c=-3e4;
+			var d=Infinity;
+			var e=0xaf;
+			var f=066;
+			var g=NaN;
+//			以下检测出来的数据类型是number
+			console.log(typeof a);
+			console.log(typeof b);
+			console.log(typeof c);
+			console.log(typeof d);
+			console.log(typeof e);
+			console.log(typeof f);
+			console.log(typeof g);*/
+//			以下检测出来的数据类型是string
+/*			var a1="嘻嘻";
+			var a2="lalala";
+			var a3="123";
+			var a4='';
+			console.log(typeof a1);
+			console.log(typeof a2);
+			console.log(typeof a3);
+			console.log(typeof a4);*/
+			var hh;
+			console.log(typeof hh);//undefined
+		</script>
+<!--加号-->
+		<script type="text/javascript">
+			console.log("你"+"好");//你好
+			console.log(12+13);//25
+			var a='1',b='2';
+			console.log(a+b);//12
+			var aa=12;
+			var bb=11;
+			console.log(aa+"bb");//12bb
+			var a1=1,b1=22,c1=12;;
+			console.log('a1'+a1+b1+c1+"c1");//a112212c1
+			console.log('na\'h\'ao');
+		</script>
+<!--prompt-->
+		<script type="text/javascript">
+//			alert("你好，星期三");
+//			var a=prompt("请输入你的年龄",'18');
+			/*var a=prompt("请输入你的年龄");
+			alert('用户输入的a的值：'+a);*/
+			/*var a=12.12333;
+			var b='15';
+			var c=parseInt(b)
+			
+			console.log(typeof c);//string
+			alert(a+c);*/
+			var a=prompt("请输入第一个数字");
+			var b=prompt("请输入第二个数字");
+			console.log(typeof a);//string
+			var sum=parseFloat(a)+parseFloat(b);
+			alert(sum);
+		</script>
+<!--parseInt-->
+		<script type="text/javascript">
+			/*var a='123';
+			var b=parseInt(a);//parseInt就把字符串123转换为数字123
+			console.log(b);
+			console.log(typeof b);
+			console.log(parseInt('123.123'));//123
+			console.log(parseInt('123我爱你'));
+			console.log(parseInt('2020年2月'));//2020
+			console.log(parseInt('200px'));//200
+			console.log(parseInt('-123.1232133434'));//-123
+			console.log(parseInt("我爱你三百六十五天"));//NaN*/
+			
+//			结果都是15
+			console.log(parseInt(15,10));
+			console.log(parseInt(17,8));//15
+			console.log(parseInt(1111,2));//1 2 4 8
+			console.log(parseInt(16,9));
+			console.log(parseInt('0xf',16));
+			console.log(parseInt('f',16));//15
+			console.log(parseInt('15e6',10));//15
+			console.log(parseInt('15*6',10));//15
+		</script>
+<!--parsefloat-->
+		<script type="text/javascript">
+			var a="12.345";
+			console.log(a);
+			var b=parseFloat(a);
+			console.log(b)
+			console.log(typeof b);
+			console.log(parseFloat('123.5453你好'));//123.5453
+			console.log(parseFloat('123.54.53你好'));//123.54
+			console.log(parseFloat("哈哈123.123嘻嘻"));//NaN
+		</script>
+<!--数字转换为string类型-->
+		<script type="text/javascript">
+			var a=12;
+			console.log(typeof a);//number
+			var b=a+'';//加一个空的字符串
+			console.log(b);
+			console.log(typeof b);
+		</script>
+<!--次方和开方-->
+		<script type="text/javascript">
+			var a=Math.pow(3,4);
+			var b=Math.pow(3,2+Math.pow(3,4));
+			var c=Math.sqrt(9);
+			console.log(a);//81
+			console.log(b);
+			console.log(c);
+		</script>
+<!--数字运算符-->	
+		<script type="text/javascript">
+			/*console.log(1+1);//2   +类型都是number的会进行加运算，如果类型不一致就会进行拼接
+			console.log(10-2);//8
+			console.log(2.5*4);//10
+			console.log(15/5);//3
+			console.log(17%3);//2 17/3=5....2*/
+			
+			console.log(12%3);//0
+			console.log(100%3)//1
+			console.log(7%9);//7
+			console.log(6%6);//0
+			console.log(1+5*6/3%7);//4
+			console.log(5*12+3%2);//61
+			var a=4*(3+(11+4)*2);//132
+			console.log(a);//132
+			
+			var cc=3*'8';
+			var dd=8-'3';
+			console.log(cc);//24
+			console.log(dd);//5
+			
+			//除加法运算外,其他的数字与数字字符串进行运算都会将数字字符串转换为数字,进行运算
+        </script>
+<!--数学运算符的隐式转换-->
+		<script type="text/javascript">
+//			隐式转换:在我们没有写parseint和parsefloat()自己帮你进行转换格式
+			console.log('48'/'2');//24
+			console.log('36'%13);//10
+			console.log(5*null);//0 null-->0
+			console.log(5*false);//0 false-->0
+			console.log(5*true);//0 true-->1
+			console.log(5*undefined);//NaN  undefined不能进行隐式转换
+			console.log(6*"5天");//NaN  数学运算中，不纯的字符串没有办法进行隐式转换
+			
+			
+			console.log(3+"8");//38
+			console.log(8+undefined);//NaN
+			console.log(8+null);//8
+			console.log(8+false);//8
+			console.log(8+true);//9
+			
+			
+			console.log(Infinity+10);//Infinity
+			console.log(Infinity-10);//Infinity
+			console.log(Infinity+Infinity);//Infinity
+			console.log(Infinity-Infinity);//NaN
+			console.log(Infinity/Infinity);//NaN
+			console.log(Infinity*Infinity);//Infinity
+//			1/10000000000000=0.0000000000001-->0
+			console.log(0/0);//NaN
+			console.log(2/0);//Infinity
+			console.log(NaN/4);
+		</script>
+<!--关系运算符-->
+		<script type="text/javascript">
+			console.log(5>100);//false
+			console.log(5<8);//true
+			console.log(9>=7);//true
+			console.log(9<=7);//false
+//			==表示相等,会帮你进行隐式转换
+			console.log(5==5);//true
+			console.log(5=="5");//true
+//			===表示的是全等,不仅仅要比较大小,还有比较类型
+			console.log(8===8);//true
+			console.log(8==='8');//false
+//			!=和!==
+			console.log(7!=3);//true
+			console.log(5!="5");//false
+			console.log(8!=='8');//true
+			
+			console.log('a'<'A');//false
+			console.log('a'<'A');//false
+			console.log('1'<'A');//true
+			console.log('232324'<'43');//true
+			console.log('abc'<'abd');//true
+			console.log(null<0.00000001);//true
+			console.log(null>-0.00000001);//true
+			console.log(null==0);//false
+			console.log(false==0);//true
+			console.log(true==1);//true
+			console.log(NaN==NaN);//false
+			console.log(NaN!=NaN);//true
+			console.log(NaN===NaN);//false
+			console.log(NaN!==NaN);//true
+			var a=3>2>1
+			console.log(a);//false
+		</script>
+<!--逻辑运算符-->
+		<script type="text/javascript">
+			console.log(true&&true);//true
+			console.log(true&&false);//false
+			console.log(false&&true);//false
+			console.log(false&&false);//false
+			console.log(true||true);//true
+			console.log(true||false);//true
+			console.log(false||true);//true
+			console.log(false||false);//false
+			console.log(!!!!!!!!!false);//true
+//			负性的：false，null， 0， NaN， 空字符串("")，undefined
+			console.log(12&&false);//false
+			console.log(12&&123);//123
+			console.log(12&&123);//123
+			console.log(undefined&&123);//undefined
+			console.log(null&&true);//null
+			console.log(0&&123);//0
+			console.log(123||NaN);//123
+			console.log(0||10);//10
+			console.log(NaN||undefined);//undefined
+			
+//			! && ||
+			var a=11||33&&44||55;
+			console.log(a);//11
+			var bb=undefined && ('5'!=5) || NaN && null;
+			console.log(bb)//NaN
+		</script>
+<!--赋值运算-->	
+		<script type="text/javascript">
+			var a=11;
+			a+=2;//a=a+2
+			console.log(a);
+			var b=10;
+			b/=3;//b=b/3
+			console.log(b);
+			var c="我";
+			c+="爱";
+			c+="你";
+			console.log(c);//我爱你
+			var d=5;
+			d++;//d=d+1;
+			console.log(d);//6
+			var e=12
+			++e;
+//			console.log(e++);//12  e++先执行，在自加1
+			console.log(e);//13
+//			console.log(++e);//13  ++e先自加，在执行
+			var f=11;
+			console.log(2 + f++);//13
+			console.log(f);//12
+			var g=9;
+			console.log(++g%2);//0
+			console.log(g);//10
+		</script>
+<!--混合运算-->
+		<!--<!运算顺序:--    ++ -- !贴身的  →→→ 数学 →→→ 比较 →→→ 逻辑  →→→ 赋值        -->
+		<script type="text/javascript">
+			var a=6 < 8 && 4 < 17;
+//			 true && true;
+			console.log(a);//true
+			var b=11+4<12+3&&3+5<6*2;
+			console.log(b);//false
+		</script>
+<!--if语句-->
+		<script type="text/javascript">
+			var a=58;
+			/*if(a>=60){
+				alert("哇塞，终于及格了");
+			}else{
+				alert("又没及格！！");
+			}*/
+//			如果结构体重只有单行语句,那么可以省略{}
+			/*if(a>=60)
+			alert("哇塞，终于及格了");
+			else
+			alert("又没及格！！");*/
+//			可以省略else
+/*			if(a>=60){
+				alert("及格啦");
+			}*/
+			if(a>=60){
+				console.log('棒棒哒');
+				console.log('哇塞');
+				console.log('终于及格了');
+			}else{
+				console.log("纳尼");
+				console.log("没错呀");
+				console.log("哎，没及格");
+			}
+			console.log("心情真棒");//一定执行，因为他在结构体的外面
+		</script>
+<!--多条分支语句-->
+		<script type="text/javascript">
+			var score=parseInt(prompt("请输入你的成绩"));
+			if (score>90) {
+				alert("优秀");
+			}else if(score>=80){
+				alert("良好");
+			}else if(score>=60){
+				alert("及格");
+			}else{
+				alert("不及格");
+			}
+		</script>
+<!--if嵌套-->
+		<script type="text/javascript">
+			var sex=prompt("请输入你的性别");
+			var age=parseInt(prompt("请输入你的年龄"));
+			if(sex=="女"){
+				if(age>=23){
+					alert("女同志你好，你可以结婚啦")
+				}else{
+					alert("你还小，在等几年")
+				}
+			}else if(sex=="男"){
+				if (age>=26) {
+					alert("男同志你好，你可以结婚啦")
+				}else{
+					alert("太小啦，不准结婚");
+				}
+			}else{
+				alert("你输入的不是正确的性别");
+			}
+		</script>
+<!--逻辑案例-->
+		<script type="text/javascript">
+			var age=parseInt(prompt("请输入你的年龄"));
+//			与运算
+			/*(age>=18)&& alert("恭喜你已经成年了");
+			(age<18)&& alert("小屁孩，等待长大");*/
+//			或运算
+			(age>=18)|| alert("小屁孩，等待长大");
+			(age<18)|| alert("恭喜你已经成年了");
+		</script>
+	</body>
+</html>

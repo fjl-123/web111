@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon" /> 
+		<style type="text/css">
+		.main{
+			width: 1000px;
+			margin:30px auto
+		}
+		.log{
+		    position: relative;
+		    margin: 0 auto;
+		}
+		tbody {
+		    display: table-row-group;
+		    vertical-align: middle;
+		}
+		.inpt input{
+			border:1px solid  #000;
+			border-radius: 5px;
+		    font-size: 16px;
+		    width: 265px;
+		    height: 34px;
+		    background-image: url(img/icon/phone.png);
+		    background-repeat: no-repeat;
+		    background-position-x: 10px;
+    		background-position-y: 7px;
+		    padding-left: 35px;
+		}
+		.inpt1 input{
+			border:1px solid  #000;
+			border-radius: 5px;
+		    font-size: 16px;
+		    width: 137px;
+		    height: 34px;
+		    float: left;
+		    background-image: url(img/icon/code.png);
+		    background-repeat: no-repeat;
+		    background-position-x: 10px;
+    		background-position-y: 7px;
+		    padding-left: 35px;
+		}
+		.inpt1 .hq{
+			border: solid 1px #000;
+		    height: 35px;
+		    line-height: 34px;
+		    width: 110px;
+		    font-size: 14px;
+		    margin-left: 12px;
+		    border-radius: 4px;
+		    color: #333;
+		    float: right;
+		    cursor: pointer;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<table class="log" style="width: 300px;">
+				<tbody>
+				<tr valign="center" align="middle">
+					<td colspan="2"height="150">
+						<a href="#">
+							<img src="img/icon/log.png"style="margin-bottom: 60px;margin-top: 60px;"/>
+						</a>
+					</td>
+				</tr>
+				<tr valign="center"align="middle">
+					<td colspan="2"height="36">
+						<div class="inpt">
+							<input type="text" name="mobile" id="mobile" value="输入手机号" />
+						</div>
+					</td>
+				</tr>
+				<tr valign="center"></tr>
+				<tr valign="center"align="middle">
+					<td colspan="2"height="36">
+						<div class="inpt1">
+							<input type="text" name="code" id="code" value="输入验证码" />
+							<div class="hq">获取验证码</div>
+						</div>
+					</td>
+				</tr>
+				<tr valign="center">
+					<td colspan="2"style="padding-top: 22px;color: #000;">
+						<input type="checkbox" name="checkbox" id="checkbox" value="1 "checked="checked" style="vertical-align: middle;"/>
+						<span class="z"style="vertical-align: middle;font-size: 12px;">自动登录</span>
+					</td>
+				</tr>
+				<tr valign="center"align="middle">
+					<td colspan="2">
+						<a href="#"style="color: #000;font-size: 15px;text-decoration: none;">更多登录方式</a>
+					</td>
+				</tr>
+				</tbody>
+			</table>	
+		</div>
+	</body>
+</html>

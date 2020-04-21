@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+        	margin:0;
+        	padding:0;
+         }
+        img{border:none;}
+        #box{
+            width: 396px;
+            margin : 50px auto;
+        }
+        #box .btn{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background: #000;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        #box p{
+            margin : 10px 0;
+            color: slateblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <span id="add" class="btn">+</span>
+        <span id="del" class="btn">-</span>
+        <p>hahaha</p>
+        <p></p>
+        <p>该起床了！！！</p>
+    </div>
+
+    <script>
+        var oAdd = document.getElementById("add"),
+            oDel = document.getElementById("del"),
+            oBox = document.getElementById("box"),
+            size = 16;
+        oAdd.onclick = function (){
+              size = size + 1;
+              size += 1;
+            if( size > 40){
+                alert("不能再调皮咯!");
+                size = 40;
+            };
+            oBox.style.fontSize = size + "px";
+        };
+        oDel.onclick = function (){
+              size = size - 1;
+              size -= 1;
+            if( size < 16 ){
+                alert("主人,不能再调皮咯!");
+                size = 16;
+            }
+            oBox.style.fontSize = size + "px";
+        };
+    </script>
+</body>
+</html>

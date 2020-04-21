@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.nav{
+				width: 1000px;
+				height: 40px;
+				margin: 50px auto;
+			}
+			.nav ul{
+				list-style: none;
+			}
+			.nav ul li{
+				float: left;
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				background-color: red;
+				position: relative;
+			}
+			.nav ul li a{
+				text-decoration: none;
+				color: white;
+			}
+			.box2{
+				width: 120px;
+				text-align: center;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				display:none;
+				padding-top: 10px;
+			}
+			.inner{
+				background-color: darkorange;
+			}
+			.box2 a{
+				display: block;
+				height: 30px;
+				line-height: 30px;
+				text-align: left;
+			}
+			.box2 a:hover{
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li>
+					<a href="#">公司简介</a>
+					<div class="box2">
+						<div class="inner">
+							<p><a href="#">公司</a></p>
+							<p><a href="#">公司</a></p>
+							<p><a href="#">公司</a></p>
+							<p><a href="#">公司</a></p>
+						</div>
+					</div>
+				</li>
+				<li><a href="#">公司财务</a></li>
+				<li>
+					<a href="#">关于我们</a>
+					<div class="box2">
+						<div class="inner">
+							<p><a href="#">栏态</a></p>
+							<p><a href="#">了解</a></p>
+							<p><a href="#">热搜榜</a></p>
+							<p><a href="#">简介</a></p>
+						</div>
+					</div>
+				</li>
+				<li><a href="#">详情</a></li>
+				<li><a href="#">更多</a></li>
+				
+			</ul>
+		</div>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("li").mouseenter(function(){
+				$(this).children(".box2").slideDown()
+			})
+			$("li").mouseleave(function(){
+				$(this).children(".box2").slideUp()
+			})
+		</script>
+	</body>
+</html>

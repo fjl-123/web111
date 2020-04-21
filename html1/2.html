@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<form action="test.html" method="get">
+			<fieldset id="">
+				<legend align="center">输入型控件</legend>
+				<p>用户名：<input type="text" name="yhm" id="" value="" /></p>
+				<p>密码：<input type="password" name="mima" id="" value="" /></p>
+			    <p>年龄：<input type="number" name="age" id="age" value="" />
+			    <p>邮箱：
+				<input type="email" name="yx" id="yx" value="" />
+			</p>
+			<p>
+				自我评价：
+				<textarea name="zwpj" rows="10" cols="30">自我评价</textarea>
+			</p>
+			</p>
+			</fieldset>
+			<fieldset id="">
+				<legend align="center">选择型控件</legend>
+				<p>
+				性别：
+				<input type="radio" name="sex" id="" value="男" />男
+				<input type="radio" name="sex" id="" value="女" />女
+			</p>
+			<p>
+				爱好：
+				<input type="checkbox" name="hobby" id="" value="吃饭" />吃饭
+				<input type="checkbox" name="hobby" id="" value="睡觉" />睡觉
+				<input type="checkbox" name="hobby" id="doudou" value="打豆豆" /><label for="doudou">打豆豆</label> 
+			</p>
+			<p>籍贯：
+				<select name="zone">
+					<option value="陕西省" label="陕西省"></option>
+					<option value="山西省" label="山西省"></option>
+					<option value="湖南省" label="湖南省"></option>
+					<option value="湖北省" label="湖北省"></option>
+				</select>
+				<p>
+				时间：
+				<input type="date" name="sj"  value="" />
+				<input type="datetime" name="rqsj" id="rqsj" value="" />
+				<input type="datetime-local" name="localtime"  value="" />
+				<input type="week" name="weektime"  value="" />
+				<input type="month" name="yuefen"  value="" />
+			</p>
+			</p>
+			<p>喜欢的颜色：
+				<input type="color" name="ys" id="ys" value="" />
+			</p>
+			</fieldset>
+			
+			
+			<fieldset id="">
+				<legend align="center">事件（按钮）型控件</legend>
+				
+				<input type="submit" value="提交"/>
+			<input type="reset" value="重置"/>
+			<input type="button" value="按钮"/>
+			</fieldset>
+			
+		</form>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				text-align: center;
+			}
+			/*body{
+				background-color: pink;
+			}*/
+			#box{
+				width: 100%;
+				/*height: 400px;*/
+				font-size: 32px;
+				color: blueviolet;
+				margin-top: 100px;
+			}
+			.box1{
+				height: 45px;
+				overflow: hidden;
+			}
+			.box1 div div{
+				height: 45px;
+				margin-bottom: 45px;
+				color: red;
+				font-weight: bold;
+				display: inline-block;
+				padding: 0 20px;
+				
+			}
+			.box1 div:first-child{
+				animation: jump 5s infinite linear;
+			}
+			@keyframes  jump{
+				from{
+					margin: 40px;
+				}
+				to{
+					margin: -400px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			一周开始了
+			<div class="box1">
+				<div>
+					<div>星期一，困！</div>
+				</div>
+				<div>
+					<div>星期二，没醒！</div>
+				</div>
+				<div>
+					<div>星期三，迷糊！</div>
+				</div>
+				<div>
+					<div>星期四，加油！</div>
+				</div>
+				<div>
+					<div>星期五，我干了个啥！一周完了！</div>
+				</div>
+			</div>
+			一起嗨皮吧！
+		</div>
+	</body>
+</html>

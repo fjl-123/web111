@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.tab{
+				margin: 100px auto;
+				width: 320px;
+				border-top: 1px solid chocolate;
+			}
+			.head{
+				overflow: hidden;
+			}
+			.head span{
+				margin: 2px;
+				float: left;
+				width: 100px;
+				line-height: 30px;
+				border: 1px solid #cfcfcf;
+				text-align: center;
+				font-size: 14px;
+			}
+			.head span.current{
+				background-color: white;
+				/*border-bottom-color: white;*/
+				font-weight: bold;
+			}
+			.head span a{
+				color: #252525;
+				text-decoration: none;
+			}
+			.head span:hover{
+				background-color: slateblue;
+			}
+			.head span a:hover{
+				color: white;
+				/*text-decoration: underline;*/
+			}
+			.bd{
+				padding-top: 15px;
+				padding-left: 8px;
+			}
+			.bd ul{
+				list-style: none;
+			}
+			.bd ul li a{
+				text-decoration: none;
+				color: #252525;
+			}
+			.bd div{
+				display: none;
+			}
+			.bd div.current{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tab">
+			<div class="head" id="tab_hd">
+				<span class="current">
+					<a href="">蒲公英</a>
+				</span>
+				<span>
+					<a href="">蒲公英的秘密</a>
+				</span>
+				<span class="last">
+					<a href="">蒲公英很美</a>
+				</span>
+			</div>
+			<div class="bd" id="tab_bd">
+				<div class="current">
+					<img src="img/01.jpg" width="300"/>
+				</div>
+				<div>
+					<img src="img/02.jpg" width="300"/>
+				</div>
+				<div >
+					<img src="img/03.JPG" width="300"/>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var headSpan=document.getElementById("tab_hd").getElementsByTagName("span");
+			var bdDivs=document.getElementById("tab_bd").getElementsByTagName("div");
+			for (var i=0;i<headSpan.length;i++) {
+				(function(m){
+					headSpan[m].onmouseover=function(){
+						for (var j=0;j<bdDivs.length;j++) {
+							bdDivs[j].className="";
+						}
+						bdDivs[m].className="current";
+						headSpan[0].className='';
+						headSpan[1].className='';
+						headSpan[2].className='last';
+						this.className+=" current";
+					}
+				})(i)
+			}
+		</script>
+	</body>
+</html>

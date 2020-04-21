@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*一.给带有浮动的元素加父级设置高度*/
+
+
+/*.box1 {
+	width: 400px;
+	height: 400px;
+	background-color: red;
+	float: left;
+}
+.box2 {
+	width: 300px;
+	height: 300px;
+	background-color: aqua;
+	float: left;
+}
+.box3 {
+	width: 500px;
+	height: 500px;
+	background-color: blueviolet;
+}
+.box {
+	height: 400px
+}*/
+
+
+/*二.隔墙法*/
+
+
+/*.box1 {
+	width: 400px;
+	height: 400px;
+	background-color: red;
+	float: left;
+}
+.box2 {
+	width: 300px;
+	height: 300px;
+	background-color: aqua;
+	float: left;
+}
+.box3 {
+	width: 500px;
+	height: 500px;
+	background-color: blueviolet;
+}
+.w{
+	clear: both;
+}*/
+
+
+/*三.内隔墙法*/
+
+
+/*.box {
+	width: 600px;
+	height: 400px;
+	border: 1px solid red;
+	margin: 10px;
+}
+.box p {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	margin: 10px;
+	float: left;
+}
+.w{
+	clear: both;
+}*/
+
+
+/*四.overflow:hidden清浮动*/
+
+
+/*.box {
+	width: 600px;
+	height: 600px;
+	border: 1px solid red;
+	margin: 10px;
+	overflow: hidden;/*超出隐藏*/
+
+
+}
+
+/*.box p{
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	margin: 10px;
+	float: left;
+}*/
+
+/*五.父级加伪元素*/
+
+/*.box {
+	width: 600px;
+	margin: 10px;
+	zoom:1;
+}
+.box::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.box p{
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	margin: 10px;
+	float: left;
+}*/
+
+/*六.before和after双伪元素清浮动*/
+.box{
+	border: 10px solid red;
+	margin: 20px;
+	*zoom: 1;
+}
+.box::after,.box::before{
+	content: '';
+	display: block;
+	clear: both;
+}
+.box p {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	margin: 10px;
+	float: left;
+}

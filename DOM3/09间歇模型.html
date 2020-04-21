@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>今天天气真好</li>
+				<li>樱花开了</li>
+				<li>心情真好啊</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var ul=document.getElementsByName("ul")[0];
+			var lis=document.getElementsByName("li");
+			var length=lis.length;
+			//cloneNode复制节点
+			ul.appendChild(lis[0].cloneNode(true));
+			var idx=0;
+			function move(){
+				idx++;
+				animate(ul,{"top":-40*idx},800,)
+			}
+		</script>
+	</body>
+</html>

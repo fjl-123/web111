@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*var arr=[];
+			arr.push(function(){
+				alert("星期五");
+			})
+			arr.push(function(){
+				alert("嘻嘻");
+			})
+			arr.push(function(){
+				alert("哈哈");
+			})
+			arr.push(function(){
+				alert(a+b);
+			})
+			//arr[2]就是函数,加上()才可以运行
+			arr[2]();
+			arr[3](1,4);*/
+			/*var arr=[];
+			for (var i=0;i<=10;i++){
+				arr[i]=function(){
+					alert(i);试图每个函数弹出自己的编号
+				}
+			}
+			arr[3]()//11*/
+			//解决办法
+			/*var arr=[];
+			for (let i=0;i<=10;i++){
+				arr[i]=function(){
+					alert(i);试图每个函数弹出自己的编号
+				}
+			}
+			arr[3]()//3*/
+			var arr=[];
+			for (var i=0;i<=10;i++) {
+				(function(m){
+					arr[m]=function(){
+						alert(m);
+					}
+				})(i)
+			}
+			arr[3]()//3
+		</script>
+	</body>
+</html>

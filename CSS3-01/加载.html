@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-color: pink;
+			}
+			.box{
+				width: 100%;
+				max-width: 1000px;
+				height: 400px;
+				background-color: palegreen;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				display: flex;
+				justify-content: space-around;
+			}
+			.t{
+				width: 40px;
+				height: 40px;
+				border-radius: 0;
+				animation: jump 1s infinite linear;
+			}
+			.t:nth-child(1){
+				animation-delay: 0s;
+			}
+			.t:nth-child(2){
+				animation-delay: 0.1s;
+			}
+			.t:nth-child(3){
+				animation-delay: 0.2s;
+			}
+			.t:nth-child(4){
+				animation-delay: 0.3s;
+			}
+			.t:nth-child(5){
+				animation-delay: 0.4s;
+			}
+			.t:nth-child(6){
+				animation-delay: 0.5s;
+			}
+			.t:nth-child(7){
+				animation-delay: 0.6s;
+			}
+			.t:nth-child(8){
+				animation-delay: 0.7s;
+			}
+			.t:nth-child(9){
+				animation-delay: 0.8s;
+			}
+			.t:nth-child(10){
+				animation-delay: 0.9s;
+			}
+			.t:nth-child(11){
+				animation-delay: 1s;
+			}
+			@keyframes jump{
+				0%{
+					transform: translateY(0px);
+					border-radius: 0%;
+				}
+				50%{
+					transform: translateY(360px);
+					border-radius: 50%;
+				}
+				100%{
+					transform: translateY(0px);
+					border-radius: 0%;
+				}
+			}
+			.t:nth-child(2n){
+				background-color: blueviolet;
+			}
+			.t:nth-child(2n-1){
+				background-color: salmon;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+			<div class="t"></div>
+		</div>
+	</body>
+</html>

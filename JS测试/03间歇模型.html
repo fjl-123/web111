@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 600px;
+				height: 180px;
+				border: 1px solid red;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.box ul{
+				list-style: none;
+				width:600px;
+	            position: absolute;
+	            top:0px;
+	            left:0px;
+			}
+			.box ul li{
+			    float: left;
+	            width:180px;
+	            height:150px;
+	            margin: 3px;
+			}
+			.box ul li img{
+				width: 180px;
+				height: 150px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+				<ul id="unit">
+					<li>
+						<a href=""><img src="img/01.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/02.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/03.JPG"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/04.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/05.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/06.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/07.JPG"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/08.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/09.jpg"/></a>
+					</li>
+				</ul>
+		</div>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+        	var $unit = $("#unit");
+	        var amount = $unit.children().length;
+	        // console.log(amount);9
+	
+	        // 信号量
+	        var idx = 0;
+	        // 克隆前三张图片追加到unit的最后
+	        $unit.children("li:lt(3)").clone().appendTo($unit);
+	
+	
+	        // 先拉动再验证
+	        var timer = setInterval(function(){
+	            idx ++;
+	            $unit.animate({"top":-157 * idx},600,function(){
+	                // 验证
+	                if(idx > amount/3 - 1){
+	                    idx = 0;
+	                    $unit.css("top",0);
+	                }
+	            });
+	        },2600);
+    </script>
+</html>
