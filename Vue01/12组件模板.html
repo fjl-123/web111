@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript/vue.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <hello>
+            <div slot="one">one</div>
+            <div slot="two">two</div>
+            <div slot="three">three</div>
+            <h1>Hello world!!!</h1>
+        </hello>
+    </div>
+    <!-- <template id="content">
+        <div>
+            <span>首页</span>
+            <slot name="two">
+                <h3>two</h3>
+            </slot>
+            <slot name="one">
+                <h3>one</h3>
+            </slot>
+            <slot name="three">
+                <h3>three</h3>
+            </slot>
+            <h1>Hello world!!!</h1>
+        </div>
+    </template> -->
+    <script type="x-template" id="content">
+        <div>
+            <span>首页</span>
+            <slot name="two">
+                <h3>two</h3>
+            </slot>
+            <slot name="one">
+                <h3>one</h3>
+            </slot>
+            <slot name="three">
+                <h3>three</h3>
+            </slot>
+            <h1>Hello world!!!</h1>
+        </div>
+    </script>
+    <script>
+        Vue.component('hello', {
+            template: "#content",
+        })
+        new Vue({
+            el: "#box",
+        })
+    </script>
+</body>
+
+</html>

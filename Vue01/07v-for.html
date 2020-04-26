@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <ul v-for="k in xingming">
+            <li>{{k}}</li>
+        </ul>
+        <!-- 做项目中v-for会报错，解决办法如下 -->
+        <ul v-for="(k,x) in xingming" :key="x">
+            <li>{{k}}</li>
+        </ul>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#box",
+            data: {
+                shige: ["小花", "小明", "小田", "花花", "悠悠"]
+            }
+        })
+    </script>
+</body>
+
+</html>

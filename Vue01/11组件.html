@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <hello>
+            <div>你好</div>
+            <div>杰瑞</div>
+        </hello>
+    </div>
+    <template id="content">
+        <div>
+            <h2>开始</h2>
+            <slot></slot>
+            <h2>结束</h2>
+        </div>
+    </template>
+    <script>
+        let vm = new Vue({
+            el: "#box",
+            data: {
+                message: 'hello',
+            },
+            components: {
+                'hello': {
+                    template: "#content",
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
