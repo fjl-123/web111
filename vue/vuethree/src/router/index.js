@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Page from '@/components/page'
 import Work from '@/components/work'
 import frist from '@/components/frist'
+import dlist from '@/components/dlist'
+import sort from '@/components/sort'
 
 const User = {
     template: `<div>
@@ -45,6 +47,16 @@ export default new Router({
             path: "/frist/:id",
             name: "frist",
             component: frist
+        },
+        {
+            path: "/dlist",
+            name: "dlist",
+            component: dlist
+        },
+        {
+            path: "/sort",
+            name: "sort",
+            component: sort
         },
         {
             path: '/user/:id',
